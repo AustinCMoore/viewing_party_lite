@@ -20,7 +20,7 @@ RSpec.describe 'The new user view/form' do
   end
 
   it 'does not register the same email twice' do
-    user = User.create!(name: 'user_3', email: 'email3@gmail.com')
+    user = User.create!(name: 'user_3', email: 'email3@gmail.com', password: 'password')
     visit register_path
     fill_in 'Name', with: 'Plain Name'
     fill_in 'Email', with: 'email3@gmail.com'

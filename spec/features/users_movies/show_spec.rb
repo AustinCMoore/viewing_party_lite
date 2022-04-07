@@ -5,7 +5,7 @@ require 'rails_helper'
       UserParty.destroy_all
       User.destroy_all
       Party.destroy_all
-      user = User.create!(name: 'User', email: 'email')
+      user = User.create!(name: 'User', email: 'email', password: 'password')
 
       VCR.use_cassette('movie_title_1') do
         visit "/users/#{user.id}/movies/24126/"
@@ -21,7 +21,7 @@ require 'rails_helper'
       UserParty.destroy_all
       User.destroy_all
       Party.destroy_all
-      user = User.create!(name: 'User', email: 'email')
+      user = User.create!(name: 'User', email: 'email', password: 'password')
 
       VCR.use_cassette('movie_title_2') do
         visit "/users/#{user.id}/movies/24126/"
@@ -37,7 +37,7 @@ require 'rails_helper'
       UserParty.destroy_all
       User.destroy_all
       Party.destroy_all
-      user = User.create!(name: 'user', email: 'email')
+      user = User.create!(name: 'user', email: 'email', password: 'password')
 
       VCR.use_cassette('movie_title_3') do
         visit "/users/#{user.id}/movies/24126/"
@@ -58,7 +58,7 @@ require 'rails_helper'
     UserParty.destroy_all
     User.destroy_all
     Party.destroy_all
-    user = User.create!(name: 'user', email: 'email')
+    user = User.create!(name: 'user', email: 'email', password: 'password')
 
     VCR.use_cassette('shawshank_cast') do
       visit "/users/#{user.id}/movies/24126/"
@@ -77,7 +77,7 @@ require 'rails_helper'
     UserParty.destroy_all
     User.destroy_all
     Party.destroy_all
-    user = User.create!(name: 'user', email: 'email')
+    user = User.create!(name: 'user', email: 'email', password: 'password')
 
     VCR.use_cassette('reviews_in_view') do
       visit "/users/#{user.id}/movies/278/"
